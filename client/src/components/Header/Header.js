@@ -20,7 +20,10 @@ class Header extends Component {
           <li key="1">
             <Payments />
           </li>,
-          <li key="2">
+          <li className="credits" key="2">
+            Credits: {this.props.auth.credits}
+          </li>,
+          <li key="3">
             <a href="/api/logout">Logout</a>
           </li>
         ];
@@ -37,7 +40,7 @@ class Header extends Component {
             Emaily
             <i className="material-icons">email</i>
           </Link>
-          <ul className="right">{this.renderContent()}</ul>
+          <ul className="right rightSide">{this.renderContent()}</ul>
         </div>
       </nav>
     );
